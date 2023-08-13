@@ -71,7 +71,6 @@ function App() {
     setTeam2(team2)
     
   }
-  console.log(team1, team2)
   teams = (
     <>
       <div className='team1 flex flex-wrap justify-center'>
