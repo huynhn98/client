@@ -19,7 +19,7 @@ function App() {
   var teams = "No Teams Currently"
 
   useEffect(()=>{
-    if(localStorage.getItem("characters") === null) {
+    if(localStorage.getItem("characters") === null || localStorage.getItem("characters") === "[]") {
       localStorage.setItem("characters", JSON.stringify(DEFAULT_CHARACTERS))
       
     }
