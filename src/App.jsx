@@ -76,12 +76,12 @@ function App() {
     <>
       <div className='team1 flex flex-wrap'>
         {team1.map((n)=> {
-          return <img src={new URL(`/src/assets/Character`+n+`.webp`, import.meta.url).href}/>
+          return <img src={new URL('/src/assets/Character'+n+'.webp', import.meta.url).href}/>
         })}
       </div>
       <div className='team2 flex flex-wrap'>
         {team2.map((n)=> {
-          return <img src={new URL(`/src/assets/Character`+n+`.webp`, import.meta.url).href}/>
+          return <img src={new URL('/src/assets/Character'+n+'.webp', import.meta.url).href}/>
         })}
       </div>
       </>
