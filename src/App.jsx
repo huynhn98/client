@@ -19,13 +19,14 @@ function App() {
   var teams = "No Teams Currently"
 
   useEffect(()=>{
+    console.log("hi")
     if(localStorage.getItem("characters") === null || localStorage.getItem("characters") === "[]") {
       localStorage.setItem("characters", JSON.stringify(DEFAULT_CHARACTERS))
       
     }
-    else {
       setAvailableCharacters(JSON.parse(localStorage.getItem("characters") || "[]"))
-    }
+    
+
   },[])
 
   const handleClick = (e) => {
@@ -85,15 +86,16 @@ function App() {
       </div>
       </>
   )
-  const characterButtons = allCharacters.map((char,i) => (
+  console.log("there")
+  
+  const characterList = allCharacters.map((char,i) => (
     
     <button key={i} className='' onClick={handleClick}>
       <div className=''>
        
         <img className={availableCharacters.includes(i+1) ? "icon bg-amber-400" : "icon"} src={new URL(`/src/assets/${char}.webp`, import.meta.url).href} id={i+1}/>
       </div>
-    </button>
-  ))
+    </button>))
   return (
     <>
     <div className='flex flex justify-center mt-3'>
@@ -112,7 +114,7 @@ function App() {
     </div>
     <div className='flex flex-wrap justify-center'>
       
-      {characterButtons}
+      {characterList}
     </div>
     
     </>
