@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+
 const TOTAL_CHARACTERS = 29
 const DEFAULT_CHARACTERS = [2, 7, 9, 16, 17, 19, 22, 24, 29]
 
@@ -11,7 +12,9 @@ function App() {
   const [availableCharacters, setAvailableCharacters] = useState([])
   const [team1, setTeam1] = useState([])
   const [team2, setTeam2] = useState([])
-  const allCharacters = ['']
+  const allCharacters = ['Character1', 'Character2', 'Character3', 'Character4', 'Character5', 'Character6', 'Character7', 'Character8', 'Character9','Character10',
+                          'Character11', 'Character12', 'Character13', 'Character14', 'Character15', 'Character16', 'Character17', 'Character18', 'Character19','Character20',
+                          'Character21', 'Character22', 'Character23', 'Character24', 'Character25', 'Character26', 'Character27', 'Character28', 'Character29']
   
   var teams = "No Teams Currently"
 
@@ -84,10 +87,11 @@ function App() {
       </>
   )
   const characterButtons = allCharacters.map((char,i) => (
+    
     <button key={i} className='' onClick={handleClick}>
       <div className=''>
        
-        <img className={availableCharacters.includes(i+1) ? "icon bg-amber-400" : "icon"} src={`src/assets/`+char} id={i+1}/>
+        <img className={availableCharacters.includes(i+1) ? "icon bg-amber-400" : "icon"} src={new URL(`/src/assets/${char}.webp`, import.meta.url).href} id={i+1}/>
       </div>
     </button>
   ))
