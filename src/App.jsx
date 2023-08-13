@@ -105,7 +105,7 @@ function App() {
 <div className='flex flex-col'>
         <h1 className="text-4xl m-6 text-center">Honkai Star Rail Team Randomizer</h1>
 
-      <div className='mb-6 flex justify-around'>{teams}</div>
+      <div className='mb-6 flex justify-center'>{teams}</div>
         
 
       
