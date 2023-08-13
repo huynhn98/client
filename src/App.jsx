@@ -74,12 +74,12 @@ function App() {
   console.log(team1, team2)
   teams = (
     <>
-      <div className='team1 flex flex-wrap'>
+      <div className='team1 flex flex-wrap justify-center'>
         {team1.map((n)=> {
           return <img src={new URL(`/src/assets/Character${n}.webp`, import.meta.url).href}/>
         })}
       </div>
-      <div className='team2 flex flex-wrap'>
+      <div className='team2 flex flex-wrap justify-center'>
         {team2.map((n)=> {
           return <img src={new URL(`/src/assets/Character${n}.webp`, import.meta.url).href}/>
         })}
@@ -98,14 +98,14 @@ function App() {
   return (
     <>
     <div className='flex flex justify-center mt-3'>
-      <a href='https://www.google.com' target='_blank'>Github</a>
+      <a href='https://github.com/huynhn98/hsr-team-randomizer' target='_blank'>Github</a>
     </div>
   
 
 <div className='flex flex-col'>
         <h1 className="text-4xl m-6 text-center">Honkai Star Rail Team Randomizer</h1>
 
-      <div className='mb-6 flex justify-center'>{teams}</div>
+      <div className='mb-6 flex flex-col  '>{teams}</div>
         
 
       
